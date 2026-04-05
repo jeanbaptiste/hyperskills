@@ -1,29 +1,36 @@
 # Hyperskills
 
-Une hyperskill (hypertext skill) est une URL contenant une skill encodée en base64 dans le paramètre `hs`.
+A hyperskill (hypertext skill) is a URL containing a skill base64-encoded in the `hs` query parameter.
 
-## Site
+## Website
 
 [hyperskills.net](https://hyperskills.net)
 
 ## Format
 
 ```
-URL_source?hs=BASE64_DU_CONTENU
+source_url?hs=BASE64_CONTENT
 ```
 
-Le contenu est libre : Markdown, SQL, YAML, HTML, texte. La licence aussi.
+Content is free-form: Markdown, SQL, YAML, HTML, plain text. License is up to the author.
 
-## Taille
+## Size limits
 
-- Chrome / Edge : ~32 000 caractères
-- Firefox : ~65 000 caractères
-- Safari : ~80 000 caractères
-- Avec compression (`gz.` / `br.`) : 250–500 Ko dans ~32 000 caractères
+| Browser | Max characters |
+|---------|---------------|
+| Chrome / Edge | ~32,000 |
+| Firefox | ~65,000 |
+| Safari | ~80,000 |
 
-## Voir aussi
+With compression (`gz.` / `br.` prefix): 250–500 KB fit in ~32,000 characters.
 
-- [Skillpedia](https://skillpedia.eu) — répertoire de skills CC
+## See also
+
+- [Skillpedia](https://skillpedia.eu) — CC-licensed skill directory
 - [Agent Skills](https://agentskills.io/)
 - [MCP](https://modelcontextprotocol.io/)
 - [WebMCP](https://webmachinelearning.github.io/webmcp/)
+
+## License
+
+CC BY-NC-SA 4.0 — Copyright CERI SAS
