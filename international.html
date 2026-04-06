@@ -36,6 +36,30 @@
 <option value="ko">한국어</option>
 <option value="vi">Tiếng Việt</option>
 <option value="he">עברית</option>
+<option value="it">Italiano</option>
+<option value="pl">Polski</option>
+<option value="ro">Română</option>
+<option value="nl">Nederlands</option>
+<option value="el">Ελληνικά</option>
+<option value="hu">Magyar</option>
+<option value="cs">Čeština</option>
+<option value="sv">Svenska</option>
+<option value="bg">Български</option>
+<option value="da">Dansk</option>
+<option value="fi">Suomi</option>
+<option value="sk">Slovenčina</option>
+<option value="hr">Hrvatski</option>
+<option value="lt">Lietuvių</option>
+<option value="sl">Slovenščina</option>
+<option value="lv">Latviešu</option>
+<option value="et">Eesti</option>
+<option value="mt">Malti</option>
+<option value="ga">Gaeilge</option>
+<option value="br">Brezhoneg</option>
+<option value="eu">Euskara</option>
+<option value="co">Corsu</option>
+<option value="eo">Esperanto</option>
+<option value="jbo">la lojban</option>
 </select>
 </p>
 
@@ -110,13 +134,16 @@ Android       ~8 000 caractères / characters
     if (sel) sel.value = lang;
   }
 
-  var detected = (navigator.language || '').slice(0, 2).toLowerCase();
-
   fetch('./translations.json')
     .then(function(r) { return r.json(); })
     .then(function(json) {
       data = json;
-      var lang = data[detected] ? detected : 'en';
+      var raw = (navigator.language || 'en').toLowerCase();
+      var lang = 'en';
+      var candidates = [raw, raw.split(/[-_]/)[0], raw.slice(0,3), raw.slice(0,2)];
+      for (var i = 0; i < candidates.length; i++) {
+        if (data[candidates[i]]) { lang = candidates[i]; break; }
+      }
       apply(lang);
     });
 
