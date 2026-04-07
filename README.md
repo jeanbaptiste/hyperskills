@@ -33,4 +33,4 @@ With compression (`gz.` / `br.` prefix): 250–500 KB fit in ~32,000 characters.
 
 ## License
 
-CC BY-NC-SA 4.0 — Copyright CERI SAS
+CC BY-SA 4.0 — Copyright CERI SAS
