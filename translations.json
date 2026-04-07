@@ -13,7 +13,9 @@
     "size_note": "The <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> recipe from tricoteuses is 4,895 bytes raw, 6,528 characters in base64. It fits in all modern browsers. With compression (prefix <code>gz.</code> or <code>br.</code>), skills of 250-500 KB fit in ~32,000 characters.",
     "see_also_title": "See also",
     "tool_link": "→ Encode / Decode tool",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright or Copyleft?",
+    "copyright": "Skills and recipes are processes: methods, know-how. The Berne Convention protects works of the mind in their expression, not ideas or processes. A skill describes a process: it generally falls outside the scope of copyright. Only a particularly original formulation could be protected. Sharing a skill means sharing common knowledge."
   },
   "zh": {
     "title": "Hyperskills — 面向AI和人类代理的超文本技能",
@@ -29,7 +31,9 @@
     "size_note": "tricoteuses的<a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a>配方原始大小为4,895字节,base64编码后为6,528个字符。适用于所有现代浏览器。使用压缩(前缀<code>gz.</code>或<code>br.</code>),250-500 KB的技能可压缩至约32,000个字符。",
     "see_also_title": "另见",
     "tool_link": "→ 编码/解码工具",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright还是Copyleft？",
+    "copyright": "技能和配方是过程：方法、诀窍。《伯尔尼公约》保护智力作品的表达形式，而非思想或过程。技能描述的是一个过程：它通常不在版权保护范围之内。只有特别具有原创性的表述才可能受到保护。分享技能就是分享公共知识。"
   },
   "hi": {
     "title": "Hyperskills — AI और मानव एजेंटों के लिए हाइपरटेक्स्ट कौशल",
@@ -45,7 +49,9 @@
     "size_note": "tricoteuses की <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> रेसिपी कच्चे में 4,895 बाइट्स, base64 में 6,528 अक्षर है। यह सभी आधुनिक ब्राउज़रों में फिट होती है। संपीड़न (उपसर्ग <code>gz.</code> या <code>br.</code>) के साथ, 250-500 KB की स्किल ~32,000 अक्षरों में फिट होती हैं।",
     "see_also_title": "यह भी देखें",
     "tool_link": "→ एन्कोड / डिकोड टूल",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright या Copyleft?",
+    "copyright": "कौशल और रेसिपी प्रक्रियाएँ हैं: विधियाँ, जानकारी। बर्न कन्वेंशन बौद्धिक कार्यों की अभिव्यक्ति की रक्षा करता है, विचारों या प्रक्रियाओं की नहीं। एक कौशल एक प्रक्रिया का वर्णन करता है: यह आम तौर पर कॉपीराइट के दायरे से बाहर होता है। केवल विशेष रूप से मौलिक अभिव्यक्ति ही संरक्षित हो सकती है। कौशल साझा करना सामान्य ज्ञान साझा करना है।"
   },
   "es": {
     "title": "Hyperskills — Habilidades hipertexto para agentes IA y humanos",
@@ -61,7 +67,9 @@
     "size_note": "La receta <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> de tricoteuses pesa 4.895 bytes en bruto, 6.528 caracteres en base64. Cabe en todos los navegadores modernos. Con compresión (prefijo <code>gz.</code> o <code>br.</code>), habilidades de 250-500 KB caben en ~32.000 caracteres.",
     "see_also_title": "Ver también",
     "tool_link": "→ Herramienta codificar / decodificar",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "¿Copyright o Copyleft?",
+    "copyright": "Las habilidades y recetas son procesos: métodos, saber hacer. La Convención de Berna protege las obras del espíritu en su expresión, no las ideas ni los procesos. Una habilidad describe un proceso: generalmente queda fuera del ámbito del copyright. Solo una formulación particularmente original podría estar protegida. Compartir una habilidad es compartir conocimiento común."
   },
   "ar": {
     "title": "Hyperskills — مهارات نص تشعبي لوكلاء الذكاء الاصطناعي والبشر",
@@ -77,7 +85,9 @@
     "size_note": "وصفة <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> من tricoteuses تبلغ 4,895 بايت خام، 6,528 حرفاً في base64. تناسب جميع المتصفحات الحديثة. مع الضغط (بادئة <code>gz.</code> أو <code>br.</code>)، مهارات 250-500 كيلوبايت تناسب ~32,000 حرف.",
     "see_also_title": "انظر أيضاً",
     "tool_link": "← أداة الترميز / فك الترميز",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright أو Copyleft؟",
+    "copyright": "المهارات والوصفات هي عمليات: أساليب، معرفة عملية. تحمي اتفاقية برن المصنفات الفكرية في تعبيرها، وليس الأفكار أو العمليات. تصف المهارة عملية: وهي عموماً تقع خارج نطاق حقوق النشر. فقط الصياغة الأصيلة بشكل خاص يمكن أن تكون محمية. مشاركة المهارة تعني مشاركة المعرفة المشتركة."
   },
   "fr": {
     "title": "Hyperskills — Compétences hypertexte pour agents IA et humains",
@@ -93,7 +103,9 @@
     "size_note": "La recette <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> de tricoteuses fait 4 895 octets en clair, 6 528 caractères en base64. Elle passe sur tous les navigateurs modernes. Avec compression (préfixe <code>gz.</code> ou <code>br.</code>), des skills de 250-500 Ko tiennent dans ~32 000 caractères.",
     "see_also_title": "Voir aussi",
     "tool_link": "→ Outil encoder / décoder",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright ou Copyleft ?",
+    "copyright": "Les compétences et recettes sont des processus : des méthodes, du savoir-faire. La Convention de Berne protège les œuvres de l'esprit dans leur expression, pas les idées ni les processus. Une compétence décrit un processus : elle échappe en général au droit d'auteur. Seule une formulation particulièrement originale pourrait être protégée. Partager une compétence, c'est partager un savoir commun."
   },
   "bn": {
     "title": "Hyperskills — AI এবং মানব এজেন্টদের জন্য হাইপারটেক্সট দক্ষতা",
@@ -109,7 +121,9 @@
     "size_note": "tricoteuses-এর <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> রেসিপি কাঁচা 4,895 বাইট, base64-এ 6,528 অক্ষর। এটি সমস্ত আধুনিক ব্রাউজারে ফিট করে। সংকোচনের সাথে (উপসর্গ <code>gz.</code> বা <code>br.</code>), 250-500 KB দক্ষতা ~32,000 অক্ষরে ফিট করে।",
     "see_also_title": "আরও দেখুন",
     "tool_link": "→ এনকোড / ডিকোড টুল",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright নাকি Copyleft?",
+    "copyright": "দক্ষতা এবং রেসিপি হলো প্রক্রিয়া: পদ্ধতি, কৌশল। বার্ন কনভেনশন বুদ্ধিবৃত্তিক কাজের অভিব্যক্তি রক্ষা করে, ধারণা বা প্রক্রিয়া নয়। একটি দক্ষতা একটি প্রক্রিয়া বর্ণনা করে: এটি সাধারণত কপিরাইটের পরিধির বাইরে থাকে। শুধুমাত্র বিশেষভাবে মৌলিক একটি রচনাই সুরক্ষিত হতে পারে। দক্ষতা ভাগ করা মানে সাধারণ জ্ঞান ভাগ করা।"
   },
   "pt": {
     "title": "Hyperskills — Habilidades hipertexto para agentes de IA e humanos",
@@ -125,7 +139,9 @@
     "size_note": "A receita <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> do tricoteuses tem 4.895 bytes brutos, 6.528 caracteres em base64. Cabe em todos os navegadores modernos. Com compressão (prefixo <code>gz.</code> ou <code>br.</code>), habilidades de 250-500 KB cabem em ~32.000 caracteres.",
     "see_also_title": "Veja também",
     "tool_link": "→ Ferramenta codificar / decodificar",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright ou Copyleft?",
+    "copyright": "Habilidades e receitas são processos: métodos, saber-fazer. A Convenção de Berna protege as obras do espírito na sua expressão, não as ideias ou processos. Uma habilidade descreve um processo: ela geralmente está fora do âmbito do copyright. Apenas uma formulação particularmente original poderia ser protegida. Compartilhar uma habilidade é compartilhar conhecimento comum."
   },
   "ru": {
     "title": "Hyperskills — Гипертекстовые навыки для ИИ и человеческих агентов",
@@ -141,7 +157,9 @@
     "size_note": "Рецепт <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> от tricoteuses — 4 895 байт в сыром виде, 6 528 символов в base64. Помещается во всех современных браузерах. Со сжатием (префикс <code>gz.</code> или <code>br.</code>) навыки 250-500 КБ помещаются в ~32 000 символов.",
     "see_also_title": "Смотрите также",
     "tool_link": "→ Инструмент кодирования / декодирования",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright или Copyleft?",
+    "copyright": "Навыки и рецепты — это процессы: методы, ноу-хау. Бернская конвенция защищает произведения разума в их выражении, а не идеи или процессы. Навык описывает процесс: как правило, он не подпадает под действие авторского права. Только особенно оригинальная формулировка может быть защищена. Делиться навыком — значит делиться общим знанием."
   },
   "ur": {
     "title": "Hyperskills — AI اور انسانی ایجنٹوں کے لیے ہائپر ٹیکسٹ مہارتیں",
@@ -157,7 +175,9 @@
     "size_note": "tricoteuses کی <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> ریسیپی خام 4,895 بائٹس، base64 میں 6,528 حروف ہے۔ یہ تمام جدید براؤزرز میں فٹ ہوتی ہے۔ کمپریشن (سابقہ <code>gz.</code> یا <code>br.</code>) کے ساتھ، 250-500 KB مہارتیں ~32,000 حروف میں فٹ ہوتی ہیں۔",
     "see_also_title": "مزید دیکھیں",
     "tool_link": "← انکوڈ / ڈی کوڈ ٹول",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright یا Copyleft؟",
+    "copyright": "مہارتیں اور ترکیبیں عمل ہیں: طریقے، مہارت۔ برن کنونشن ذہنی تخلیقات کو ان کے اظہار میں تحفظ دیتا ہے، نہ کہ خیالات یا عمل کو۔ ایک مہارت ایک عمل کو بیان کرتی ہے: یہ عام طور پر کاپی رائٹ کے دائرے سے باہر ہوتی ہے۔ صرف خاص طور پر اصل تحریر ہی محفوظ ہو سکتی ہے۔ مہارت بانٹنا مشترکہ علم بانٹنا ہے۔"
   },
   "id": {
     "title": "Hyperskills — Keterampilan hiperteks untuk agen AI dan manusia",
@@ -173,7 +193,9 @@
     "size_note": "Resep <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> dari tricoteuses berukuran 4.895 byte mentah, 6.528 karakter dalam base64. Muat di semua browser modern. Dengan kompresi (awalan <code>gz.</code> atau <code>br.</code>), keterampilan 250-500 KB muat dalam ~32.000 karakter.",
     "see_also_title": "Lihat juga",
     "tool_link": "→ Alat encode / decode",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright atau Copyleft?",
+    "copyright": "Keterampilan dan resep adalah proses: metode, pengetahuan praktis. Konvensi Bern melindungi karya pikiran dalam ekspresinya, bukan ide atau proses. Sebuah keterampilan menggambarkan proses: umumnya berada di luar cakupan hak cipta. Hanya formulasi yang sangat orisinal yang dapat dilindungi. Berbagi keterampilan berarti berbagi pengetahuan umum."
   },
   "de": {
     "title": "Hyperskills — Hypertext-Fähigkeiten für KI- und menschliche Agenten",
@@ -189,7 +211,9 @@
     "size_note": "Das <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a>-Rezept von tricoteuses ist 4.895 Bytes roh, 6.528 Zeichen in Base64. Es passt in alle modernen Browser. Mit Komprimierung (Präfix <code>gz.</code> oder <code>br.</code>) passen Fähigkeiten von 250-500 KB in ~32.000 Zeichen.",
     "see_also_title": "Siehe auch",
     "tool_link": "→ Kodier-/Dekodier-Werkzeug",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright oder Copyleft?",
+    "copyright": "Fähigkeiten und Rezepte sind Prozesse: Methoden, Know-how. Die Berner Übereinkunft schützt Geisteswerke in ihrer Ausdrucksform, nicht Ideen oder Prozesse. Eine Fähigkeit beschreibt einen Prozess: Sie fällt in der Regel nicht unter das Urheberrecht. Nur eine besonders originelle Formulierung könnte geschützt sein. Eine Fähigkeit zu teilen bedeutet, allgemeines Wissen zu teilen."
   },
   "ja": {
     "title": "Hyperskills — AIおよび人間エージェントのためのハイパーテキストスキル",
@@ -205,7 +229,9 @@
     "size_note": "tricoteuseの<a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a>レシピは生で4,895バイト、base64で6,528文字です。すべてのモダンブラウザで動作します。圧縮(プレフィックス<code>gz.</code>または<code>br.</code>)を使用すると、250-500 KBのスキルが約32,000文字に収まります。",
     "see_also_title": "関連項目",
     "tool_link": "→ エンコード/デコードツール",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyrightか、Copyleftか？",
+    "copyright": "スキルやレシピはプロセスです：方法、ノウハウ。ベルヌ条約は精神的著作物をその表現において保護しますが、アイデアやプロセスは保護しません。スキルはプロセスを記述するものであり、一般的に著作権の対象外です。特に独創的な表現のみが保護される可能性があります。スキルを共有することは、共通の知識を共有することです。"
   },
   "sw": {
     "title": "Hyperskills — Ujuzi wa hypertext kwa mawakala wa AI na binadamu",
@@ -221,7 +247,9 @@
     "size_note": "Mapishi ya <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> kutoka tricoteuses ina baiti 4,895 ghafi, herufi 6,528 katika base64. Inafaa katika vivinjari vyote vya kisasa. Kwa ukandamizaji (kiambishi <code>gz.</code> au <code>br.</code>), ujuzi wa KB 250-500 unafaa katika herufi ~32,000.",
     "see_also_title": "Tazama pia",
     "tool_link": "→ Zana ya kusimba / kusimbua",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright au Copyleft?",
+    "copyright": "Ujuzi na mapishi ni michakato: mbinu, ujuzi wa vitendo. Mkataba wa Berne unalinda kazi za akili katika utoaji wake, si mawazo au michakato. Ujuzi unaelezea mchakato: kwa kawaida uko nje ya upeo wa hakimiliki. Ni muundo wa kipekee sana pekee unaoweza kulindwa. Kushiriki ujuzi ni kushiriki maarifa ya kawaida."
   },
   "mr": {
     "title": "Hyperskills — AI आणि मानवी एजंट्ससाठी हायपरटेक्स्ट कौशल्ये",
@@ -237,7 +265,9 @@
     "size_note": "tricoteuses ची <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> रेसिपी कच्ची 4,895 बाइट्स, base64 मध्ये 6,528 अक्षरे आहे. ही सर्व आधुनिक ब्राउझरमध्ये बसते. संकुचनासह (उपसर्ग <code>gz.</code> किंवा <code>br.</code>), 250-500 KB कौशल्ये ~32,000 अक्षरांमध्ये बसतात.",
     "see_also_title": "हे देखील पहा",
     "tool_link": "→ एन्कोड / डिकोड साधन",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright की Copyleft?",
+    "copyright": "कौशल्ये आणि पाककृती या प्रक्रिया आहेत: पद्धती, तंत्रज्ञान। बर्न अधिवेशन मानसिक कार्यांचे त्यांच्या अभिव्यक्तीत संरक्षण करते, कल्पना किंवा प्रक्रियांचे नाही। एक कौशल्य एक प्रक्रिया वर्णन करते: ते सामान्यतः कॉपीराइटच्या कक्षेबाहेर असते। केवळ विशेषतः मूळ रचनाच संरक्षित होऊ शकते। कौशल्य सामायिक करणे म्हणजे सामान्य ज्ञान सामायिक करणे."
   },
   "te": {
     "title": "Hyperskills — AI మరియు మానవ ఏజెంట్ల కోసం హైపర్‌టెక్స్ట్ నైపుణ్యాలు",
@@ -253,7 +283,9 @@
     "size_note": "tricoteuses నుండి <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> రెసిపీ ముడిగా 4,895 బైట్లు, base64లో 6,528 అక్షరాలు. ఇది అన్ని ఆధునిక బ్రౌజర్‌లలో సరిపోతుంది. కంప్రెషన్‌తో (ప్రిఫిక్స్ <code>gz.</code> లేదా <code>br.</code>), 250-500 KB నైపుణ్యాలు ~32,000 అక్షరాలలో సరిపోతాయి.",
     "see_also_title": "ఇవి కూడా చూడండి",
     "tool_link": "→ ఎన్‌కోడ్ / డీకోడ్ సాధనం",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright లేదా Copyleft?",
+    "copyright": "నైపుణ్యాలు మరియు వంటకాలు ప్రక్రియలు: పద్ధతులు, నైపుణ్యం. బెర్న్ సమావేశం మేధో రచనలను వాటి వ్యక్తీకరణలో రక్షిస్తుంది, ఆలోచనలు లేదా ప్రక్రియలను కాదు. ఒక నైపుణ్యం ఒక ప్రక్రియను వర్ణిస్తుంది: ఇది సాధారణంగా కాపీరైట్ పరిధిలోకి రాదు. ప్రత్యేకంగా అసలైన రచన మాత్రమే రక్షించబడగలదు. నైపుణ్యాన్ని పంచుకోవడం అంటే సామాన్య జ్ఞానాన్ని పంచుకోవడం."
   },
   "tr": {
     "title": "Hyperskills — Yapay zeka ve insan ajanları için hiper metin becerileri",
@@ -269,7 +301,9 @@
     "size_note": "tricoteuses'un <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> tarifi ham 4.895 bayt, base64'te 6.528 karakterdir. Tüm modern tarayıcılara sığar. Sıkıştırma ile (ön ek <code>gz.</code> veya <code>br.</code>), 250-500 KB beceriler ~32.000 karaktere sığar.",
     "see_also_title": "Ayrıca bakınız",
     "tool_link": "→ Kodlama / Çözme aracı",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright mi Copyleft mi?",
+    "copyright": "Beceriler ve tarifler süreçlerdir: yöntemler, bilgi birikimi. Bern Sözleşmesi, düşünce eserlerini ifade biçimlerinde korur; fikirleri veya süreçleri değil. Bir beceri bir süreci tanımlar: genellikle telif hakkı kapsamı dışındadır. Yalnızca özellikle özgün bir ifade korunabilir. Bir beceriyi paylaşmak, ortak bilgiyi paylaşmak demektir."
   },
   "ko": {
     "title": "Hyperskills — AI 및 인간 에이전트를 위한 하이퍼텍스트 스킬",
@@ -285,7 +319,9 @@
     "size_note": "tricoteuses의 <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> 레시피는 원시 4,895바이트, base64로 6,528자입니다. 모든 최신 브라우저에 맞습니다. 압축(접두사 <code>gz.</code> 또는 <code>br.</code>)으로 250-500 KB 스킬이 ~32,000자에 맞습니다.",
     "see_also_title": "참고",
     "tool_link": "→ 인코드 / 디코드 도구",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright 아니면 Copyleft?",
+    "copyright": "기술과 레시피는 프로세스입니다: 방법, 노하우. 베른 협약은 정신적 저작물을 그 표현에서 보호하며, 아이디어나 프로세스를 보호하지 않습니다. 기술은 프로세스를 설명합니다: 일반적으로 저작권의 범위에 해당하지 않습니다. 특별히 독창적인 표현만이 보호될 수 있습니다. 기술을 공유하는 것은 공통 지식을 공유하는 것입니다."
   },
   "vi": {
     "title": "Hyperskills — Kỹ năng siêu văn bản cho tác nhân AI và con người",
@@ -301,7 +337,9 @@
     "size_note": "Công thức <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> từ tricoteuses là 4.895 byte thô, 6.528 ký tự trong base64. Nó vừa với tất cả trình duyệt hiện đại. Với nén (tiền tố <code>gz.</code> hoặc <code>br.</code>), kỹ năng 250-500 KB vừa trong ~32.000 ký tự.",
     "see_also_title": "Xem thêm",
     "tool_link": "→ Công cụ mã hóa / giải mã",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright hay Copyleft?",
+    "copyright": "Kỹ năng và công thức là các quy trình: phương pháp, bí quyết. Công ước Berne bảo vệ các tác phẩm trí tuệ trong biểu hiện của chúng, không phải ý tưởng hay quy trình. Một kỹ năng mô tả một quy trình: nó thường nằm ngoài phạm vi bản quyền. Chỉ những diễn đạt đặc biệt nguyên bản mới có thể được bảo vệ. Chia sẻ kỹ năng là chia sẻ kiến thức chung."
   },
   "he": {
     "title": "Hyperskills — מיומנויות היפרטקסט לסוכני בינה מלאכותית ואנושיים",
@@ -317,7 +355,9 @@
     "size_note": "המתכון <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> מ-tricoteuses הוא 4,895 בתים גולמיים, 6,528 תווים ב-base64. הוא נכנס בכל הדפדפנים המודרניים. עם דחיסה (קידומת <code>gz.</code> או <code>br.</code>), מיומנויות של 250-500 KB נכנסות ב-~32,000 תווים.",
     "see_also_title": "ראו גם",
     "tool_link": "← כלי קידוד / פענוח",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "?Copyright או Copyleft",
+    "copyright": "מיומנויות ומתכונים הם תהליכים: שיטות, ידע מעשי. אמנת ברן מגנה על יצירות הרוח בביטוי שלהן, לא על רעיונות או תהליכים. מיומנות מתארת תהליך: בדרך כלל היא חורגת מתחום זכויות היוצרים. רק ניסוח מקורי במיוחד עשוי להיות מוגן. שיתוף מיומנות משמעו שיתוף ידע משותף."
   },
   "it": {
     "title": "Hyperskills — Competenze ipertestuali per agenti IA e umani",
@@ -333,7 +373,9 @@
     "size_note": "La ricetta <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> di tricoteuses pesa 4.895 byte grezzi, 6.528 caratteri in base64. Entra in tutti i browser moderni. Con compressione (prefisso <code>gz.</code> o <code>br.</code>), competenze da 250-500 KB entrano in ~32.000 caratteri.",
     "see_also_title": "Vedi anche",
     "tool_link": "→ Strumento codifica / decodifica",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright o Copyleft?",
+    "copyright": "Le competenze e le ricette sono processi: metodi, know-how. La Convenzione di Berna protegge le opere dell'ingegno nella loro espressione, non le idee o i processi. Una competenza descrive un processo: generalmente è al di fuori dell'ambito del diritto d'autore. Solo una formulazione particolarmente originale potrebbe essere protetta. Condividere una competenza significa condividere conoscenza comune."
   },
   "pl": {
     "title": "Hyperskills — Hipertekstowe umiejętności dla agentów AI i ludzi",
@@ -349,7 +391,9 @@
     "size_note": "Przepis <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> z tricoteuses waży 4 895 bajtów surowych, 6 528 znaków w base64. Mieści się we wszystkich nowoczesnych przeglądarkach. Z kompresją (prefiks <code>gz.</code> lub <code>br.</code>) umiejętności 250-500 KB mieszczą się w ~32 000 znaków.",
     "see_also_title": "Zobacz także",
     "tool_link": "→ Narzędzie kodowania / dekodowania",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright czy Copyleft?",
+    "copyright": "Umiejętności i przepisy to procesy: metody, know-how. Konwencja berneńska chroni dzieła umysłu w ich wyrażeniu, a nie idee czy procesy. Umiejętność opisuje proces: z reguły nie podlega prawu autorskiemu. Tylko szczególnie oryginalne sformułowanie mogłoby być chronione. Dzielenie się umiejętnością to dzielenie się powszechną wiedzą."
   },
   "ro": {
     "title": "Hyperskills — Competențe hipertext pentru agenți IA și umani",
@@ -365,7 +409,9 @@
     "size_note": "Rețeta <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> de la tricoteuses are 4.895 octeți brut, 6.528 caractere în base64. Încape în toate browserele moderne. Cu compresie (prefix <code>gz.</code> sau <code>br.</code>), competențe de 250-500 KB încap în ~32.000 caractere.",
     "see_also_title": "Vezi și",
     "tool_link": "→ Instrument de codificare / decodificare",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright sau Copyleft?",
+    "copyright": "Competențele și rețetele sunt procese: metode, know-how. Convenția de la Berna protejează operele spiritului în expresia lor, nu ideile sau procesele. O competență descrie un proces: în general, aceasta se situează în afara sferei dreptului de autor. Doar o formulare deosebit de originală ar putea fi protejată. A împărtăși o competență înseamnă a împărtăși cunoaștere comună."
   },
   "nl": {
     "title": "Hyperskills — Hypertekstvaardigheden voor AI- en menselijke agenten",
@@ -381,7 +427,9 @@
     "size_note": "Het <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a>-recept van tricoteuses is 4.895 bytes ruw, 6.528 tekens in base64. Het past in alle moderne browsers. Met compressie (prefix <code>gz.</code> of <code>br.</code>) passen vaardigheden van 250-500 KB in ~32.000 tekens.",
     "see_also_title": "Zie ook",
     "tool_link": "→ Codeer-/decodeertool",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright of Copyleft?",
+    "copyright": "Vaardigheden en recepten zijn processen: methoden, knowhow. De Berner Conventie beschermt geesteswerken in hun uitdrukking, niet ideeën of processen. Een vaardigheid beschrijft een proces: het valt doorgaans buiten het bereik van het auteursrecht. Alleen een bijzonder originele formulering zou beschermd kunnen zijn. Een vaardigheid delen betekent gemeenschappelijke kennis delen."
   },
   "el": {
     "title": "Hyperskills — Δεξιότητες υπερκειμένου για πράκτορες ΤΝ και ανθρώπους",
@@ -397,7 +445,9 @@
     "size_note": "Η συνταγή <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> από το tricoteuses είναι 4.895 bytes ακατέργαστα, 6.528 χαρακτήρες σε base64. Χωράει σε όλους τους σύγχρονους περιηγητές. Με συμπίεση (πρόθεμα <code>gz.</code> ή <code>br.</code>), δεξιότητες 250-500 KB χωρούν σε ~32.000 χαρακτήρες.",
     "see_also_title": "Δείτε επίσης",
     "tool_link": "→ Εργαλείο κωδικοποίησης / αποκωδικοποίησης",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright ή Copyleft;",
+    "copyright": "Οι δεξιότητες και οι συνταγές είναι διαδικασίες: μέθοδοι, τεχνογνωσία. Η Σύμβαση της Βέρνης προστατεύει τα πνευματικά έργα στην έκφρασή τους, όχι τις ιδέες ή τις διαδικασίες. Μια δεξιότητα περιγράφει μια διαδικασία: γενικά βρίσκεται εκτός του πεδίου εφαρμογής του πνευματικού δικαιώματος. Μόνο μια ιδιαίτερα πρωτότυπη διατύπωση θα μπορούσε να προστατευθεί. Η κοινοποίηση μιας δεξιότητας σημαίνει κοινοποίηση κοινής γνώσης."
   },
   "hu": {
     "title": "Hyperskills — Hiperszöveges készségek MI- és emberi ügynököknek",
@@ -413,7 +463,9 @@
     "size_note": "A tricoteuses <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> receptje nyers 4 895 bájt, base64-ben 6 528 karakter. Minden modern böngészőben elfér. Tömörítéssel (előtag <code>gz.</code> vagy <code>br.</code>) a 250-500 KB-os készségek ~32 000 karakterben elférnek.",
     "see_also_title": "Lásd még",
     "tool_link": "→ Kódoló / dekódoló eszköz",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright vagy Copyleft?",
+    "copyright": "A készségek és receptek folyamatok: módszerek, tudás. A Berni Egyezmény a szellemi alkotásokat kifejezési formájukban védi, nem az ötleteket vagy folyamatokat. Egy készség egy folyamatot ír le: általában kívül esik a szerzői jog hatályán. Csak egy különösen eredeti megfogalmazás részesülhet védelemben. Egy készség megosztása közös tudás megosztását jelenti."
   },
   "cs": {
     "title": "Hyperskills — Hypertextové dovednosti pro agenty AI a lidi",
@@ -429,7 +481,9 @@
     "size_note": "Recept <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> z tricoteuses má 4 895 bajtů surových, 6 528 znaků v base64. Vejde se do všech moderních prohlížečů. S kompresí (prefix <code>gz.</code> nebo <code>br.</code>) se dovednosti 250-500 KB vejdou do ~32 000 znaků.",
     "see_also_title": "Viz také",
     "tool_link": "→ Nástroj kódování / dekódování",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright nebo Copyleft?",
+    "copyright": "Dovednosti a recepty jsou procesy: metody, know-how. Bernská úmluva chrání díla duševní činnosti v jejich vyjádření, nikoli myšlenky nebo procesy. Dovednost popisuje proces: obecně spadá mimo rozsah autorského práva. Pouze zvláště originální formulace by mohla být chráněna. Sdílet dovednost znamená sdílet společné vědění."
   },
   "sv": {
     "title": "Hyperskills — Hypertextfärdigheter för AI- och mänskliga agenter",
@@ -445,7 +499,9 @@
     "size_note": "Receptet <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> från tricoteuses är 4 895 byte rått, 6 528 tecken i base64. Det ryms i alla moderna webbläsare. Med komprimering (prefix <code>gz.</code> eller <code>br.</code>) ryms färdigheter på 250-500 KB i ~32 000 tecken.",
     "see_also_title": "Se även",
     "tool_link": "→ Verktyg för kodning / avkodning",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright eller Copyleft?",
+    "copyright": "Färdigheter och recept är processer: metoder, kunnande. Bernkonventionen skyddar andliga verk i deras uttryck, inte idéer eller processer. En färdighet beskriver en process: den faller i allmänhet utanför upphovsrättens räckvidd. Bara en särskilt originell formulering kan vara skyddad. Att dela en färdighet innebär att dela gemensam kunskap."
   },
   "bg": {
     "title": "Hyperskills — Хипертекстови умения за AI и човешки агенти",
@@ -461,7 +517,9 @@
     "size_note": "Рецептата <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> от tricoteuses е 4 895 байта сурови, 6 528 символа в base64. Побира се във всички модерни браузъри. С компресия (префикс <code>gz.</code> или <code>br.</code>) умения от 250-500 KB се побират в ~32 000 символа.",
     "see_also_title": "Вижте също",
     "tool_link": "→ Инструмент за кодиране / декодиране",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright или Copyleft?",
+    "copyright": "Уменията и рецептите са процеси: методи, ноу-хау. Бернската конвенция защитава произведенията на ума в тяхното изражение, а не идеите или процесите. Умение описва процес: то обикновено попада извън обхвата на авторското право. Само особено оригинална формулировка може да бъде защитена. Споделянето на умение означава споделяне на общо знание."
   },
   "da": {
     "title": "Hyperskills — Hypertekstfærdigheder for AI- og menneskelige agenter",
@@ -477,7 +535,9 @@
     "size_note": "Opskriften <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> fra tricoteuses er 4.895 bytes rå, 6.528 tegn i base64. Den passer i alle moderne browsere. Med komprimering (præfiks <code>gz.</code> eller <code>br.</code>) passer færdigheder på 250-500 KB i ~32.000 tegn.",
     "see_also_title": "Se også",
     "tool_link": "→ Kodnings-/afkodningsværktøj",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright eller Copyleft?",
+    "copyright": "Færdigheder og opskrifter er processer: metoder, knowhow. Bernerkonventionen beskytter åndsværker i deres udtryk, ikke idéer eller processer. En færdighed beskriver en proces: den falder normalt uden for ophavsrettens område. Kun en særligt original formulering kan være beskyttet. At dele en færdighed er at dele fælles viden."
   },
   "fi": {
     "title": "Hyperskills — Hypertekstitaidot tekoäly- ja ihmisagenteille",
@@ -493,7 +553,9 @@
     "size_note": "Tricoteusesin <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a>-resepti on raakana 4 895 tavua, base64-muodossa 6 528 merkkiä. Se mahtuu kaikkiin nykyaikaisiin selaimiin. Pakkauksella (etuliite <code>gz.</code> tai <code>br.</code>) 250-500 KB:n taidot mahtuvat ~32 000 merkkiin.",
     "see_also_title": "Katso myös",
     "tool_link": "→ Koodaus-/dekoodaustyökalu",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright vai Copyleft?",
+    "copyright": "Taidot ja reseptit ovat prosesseja: menetelmiä, tietotaitoa. Bernin sopimus suojaa henkisiä teoksia niiden ilmaisussa, ei ideoita tai prosesseja. Taito kuvaa prosessia: se jää yleensä tekijänoikeuden soveltamisalan ulkopuolelle. Vain erityisen omaperäinen muotoilu voi olla suojattu. Taidon jakaminen on yhteisen tiedon jakamista."
   },
   "sk": {
     "title": "Hyperskills — Hypertextové zručnosti pre agentov AI a ľudí",
@@ -509,7 +571,9 @@
     "size_note": "Recept <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> z tricoteuses má 4 895 bajtov surových, 6 528 znakov v base64. Zmestí sa do všetkých moderných prehliadačov. S kompresiou (prefix <code>gz.</code> alebo <code>br.</code>) sa zručnosti 250-500 KB zmestia do ~32 000 znakov.",
     "see_also_title": "Pozri tiež",
     "tool_link": "→ Nástroj na kódovanie / dekódovanie",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright alebo Copyleft?",
+    "copyright": "Zručnosti a recepty sú procesy: metódy, know-how. Bernský dohovor chráni duševné diela v ich vyjadrení, nie myšlienky alebo procesy. Zručnosť opisuje proces: spravidla nespadá do rozsahu autorského práva. Iba obzvlášť originálna formulácia by mohla byť chránená. Zdieľať zručnosť znamená zdieľať spoločné vedomosti."
   },
   "hr": {
     "title": "Hyperskills — Hipertekstualne vještine za AI i ljudske agente",
@@ -525,7 +589,9 @@
     "size_note": "Recept <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> iz tricoteuses ima 4.895 bajtova sirovih, 6.528 znakova u base64. Stane u sve moderne preglednike. S kompresijom (prefiks <code>gz.</code> ili <code>br.</code>), vještine od 250-500 KB stanu u ~32.000 znakova.",
     "see_also_title": "Vidi također",
     "tool_link": "→ Alat za kodiranje / dekodiranje",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright ili Copyleft?",
+    "copyright": "Vještine i recepti su procesi: metode, znanje. Bernska konvencija štiti djela uma u njihovu izrazu, a ne ideje ili procese. Vještina opisuje proces: općenito je izvan dosega autorskog prava. Samo posebno originalna formulacija mogla bi biti zaštićena. Dijeliti vještinu znači dijeliti zajedničko znanje."
   },
   "lt": {
     "title": "Hyperskills — Hiperteksto įgūdžiai AI ir žmonių agentams",
@@ -541,7 +607,9 @@
     "size_note": "Tricoteuses receptas <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> yra 4 895 baitai neapdorotų, 6 528 simboliai base64. Telpa visose šiuolaikinėse naršyklėse. Su glaudinimu (priešdėlis <code>gz.</code> arba <code>br.</code>) 250-500 KB įgūdžiai telpa ~32 000 simbolių.",
     "see_also_title": "Taip pat žiūrėkite",
     "tool_link": "→ Kodavimo / dekodavimo įrankis",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright ar Copyleft?",
+    "copyright": "Įgūdžiai ir receptai yra procesai: metodai, praktinės žinios. Berno konvencija saugo proto kūrinius jų išraiška, o ne idėjas ar procesus. Įgūdis aprašo procesą: jis paprastai nepatenka į autorių teisių taikymo sritį. Tik ypač originali formuluotė galėtų būti saugoma. Dalintis įgūdžiu reiškia dalintis bendromis žiniomis."
   },
   "sl": {
     "title": "Hyperskills — Hipertekstualne veščine za agente UI in ljudi",
@@ -557,7 +625,9 @@
     "size_note": "Recept <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> iz tricoteuses ima 4.895 bajtov surovih, 6.528 znakov v base64. Gre v vse sodobne brskalnike. S stiskanjem (predpona <code>gz.</code> ali <code>br.</code>) veščine 250-500 KB gredo v ~32.000 znakov.",
     "see_also_title": "Glejte tudi",
     "tool_link": "→ Orodje za kodiranje / dekodiranje",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright ali Copyleft?",
+    "copyright": "Veščine in recepti so procesi: metode, znanje. Bernska konvencija varuje dela duha v njihovem izrazu, ne idej ali procesov. Veščina opisuje proces: praviloma ne spada na področje avtorskega prava. Samo posebej izvirna formulacija bi lahko bila zaščitena. Deliti veščino pomeni deliti skupno znanje."
   },
   "lv": {
     "title": "Hyperskills — Hiperteksta prasmes MI un cilvēku aģentiem",
@@ -573,7 +643,9 @@
     "size_note": "Tricoteuses recepte <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> ir 4 895 baiti neapstrādāti, 6 528 rakstzīmes base64. Tā ietilpst visās mūsdienu pārlūkprogrammās. Ar saspiešanu (prefikss <code>gz.</code> vai <code>br.</code>) prasmes 250-500 KB ietilpst ~32 000 rakstzīmēs.",
     "see_also_title": "Skatīt arī",
     "tool_link": "→ Kodēšanas / dekodēšanas rīks",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright vai Copyleft?",
+    "copyright": "Prasmes un receptes ir procesi: metodes, zinātība. Bernes konvencija aizsargā gara darbus to izteiksmē, nevis idejas vai procesus. Prasme apraksta procesu: tā parasti ir ārpus autortiesību tvēruma. Tikai īpaši oriģināls formulējums varētu būt aizsargāts. Dalīties ar prasmi nozīmē dalīties ar kopēju zināšanu."
   },
   "et": {
     "title": "Hyperskills — Hüpertekstioskused tehisintellekti ja inimestest agentidele",
@@ -589,7 +661,9 @@
     "size_note": "Tricoteuses'i retsept <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> on toores 4 895 baiti, base64-s 6 528 märki. See mahub kõikidesse kaasaegsetesse brauseritesse. Tihendamisega (eesliide <code>gz.</code> või <code>br.</code>) mahuvad 250-500 KB oskused ~32 000 märki.",
     "see_also_title": "Vaata ka",
     "tool_link": "→ Kodeerimis-/dekodeerimistööriist",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright või Copyleft?",
+    "copyright": "Oskused ja retseptid on protsessid: meetodid, oskusteave. Berni konventsioon kaitseb vaimutöid nende väljenduses, mitte ideid ega protsesse. Oskus kirjeldab protsessi: see jääb üldiselt autoriõiguse ulatusest välja. Ainult eriti originaalne sõnastus võiks olla kaitstud. Oskuse jagamine tähendab ühise teadmise jagamist."
   },
   "mt": {
     "title": "Hyperskills — Ħiliet ipertest għal aġenti tal-IA u l-bnedmin",
@@ -605,7 +679,9 @@
     "size_note": "Ir-riċetta <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> minn tricoteuses hija 4,895 bytes mhux ipproċessati, 6,528 karattru f'base64. Tidħol fil-browsers moderni kollha. Bil-kompressjoni (prefiss <code>gz.</code> jew <code>br.</code>), ħiliet ta' 250-500 KB jidħlu f'~32,000 karattru.",
     "see_also_title": "Ara wkoll",
     "tool_link": "→ Għodda ta' kodifikazzjoni / dekodifikazzjoni",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright jew Copyleft?",
+    "copyright": "Il-ħiliet u r-riċetti huma proċessi: metodi, għarfien. Il-Konvenzjoni ta' Berna tipproteġi xogħlijiet tal-moħħ fl-espressjoni tagħhom, mhux ideat jew proċessi. Ħila tiddeskrivi proċess: ġeneralment taqa' barra mill-ambitu tad-drittijiet tal-awtur. Formulazzjoni partikolarment oriġinali biss tista' tkun protetta. Li taqsam ħila jfisser li taqsam għarfien komuni."
   },
   "ga": {
     "title": "Hyperskills — Scileanna hipirtéacs do ghníomhairí IS agus daoine",
@@ -621,7 +697,9 @@
     "size_note": "Tá oideas <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> ó tricoteuses 4,895 beart amh, 6,528 carachtar i base64. Oireann sé do gach brabhsálaí nua-aimseartha. Le comhbhrú (réimír <code>gz.</code> nó <code>br.</code>), oireann scileanna 250-500 KB i ~32,000 carachtar.",
     "see_also_title": "Féach freisin",
     "tool_link": "→ Uirlis ionchódaithe / díchódaithe",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright nó Copyleft?",
+    "copyright": "Is próisis iad scileanna agus oidis: modhanna, saineolas. Cosnaíonn Coinbhinsiún Bherne saothair an intinne ina gcur in iúl, ní smaointe ná próisis. Déanann scil cur síos ar phróiseas: de ghnáth titeann sé lasmuigh de raon feidhme an chóipchirt. Ní fhéadfaí ach leagan amach ar leith bunúil a chosaint. Is ionann scil a roinnt agus eolas coitianta a roinnt."
   },
   "br": {
     "title": "Hyperskills — Gouiziegezhioù hipertestenn evit mibien IA ha mabdennoù",
@@ -637,7 +715,9 @@
     "size_note": "Ar resepi <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> eus tricoteuses a zo 4 895 eizhbit dianav, 6 528 arouezenn e base64. Mont a ra en holl verdeerioù nevez. Gant koñpresadur (rakger <code>gz.</code> pe <code>br.</code>), gouiziegezhioù eus 250-500 Ko a ya e ~32 000 arouezenn.",
     "see_also_title": "Gwelet ivez",
     "tool_link": "→ Ostilh enkodañ / dienkodañ",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright pe Copyleft?",
+    "copyright": "Gouiziegezhioù ha rekipeoù zo argerzhoù: hentennoù, gouiziegezh. Emglev Berna a warez oberennoù ar spered en o doare da vezañ eztaolet, ha neket mennozhioù pe argerzhoù. Ur gouiziegezh a zeskrivañ un argerzh: dre vras e chom er-maez da vaezienn ar gwir-aozer. Nemet ur furmulañs dreist-penn orin a c'hellfe bezañ gwarezet. Rannañ ur gouiziegezh a dalvez rannañ ur gouiziegezh boutin."
   },
   "eu": {
     "title": "Hyperskills — Hipertestuko trebetasunak AA eta giza agenteentzat",
@@ -653,7 +733,9 @@
     "size_note": "Tricoteuses-en <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> errezeta 4.895 byte gordin da, base64-n 6.528 karaktere. Nabigatzaile moderno guztietan sartzen da. Konpresioarekin (aurrizkia <code>gz.</code> edo <code>br.</code>), 250-500 KBko trebetasunak ~32.000 karakteretan sartzen dira.",
     "see_also_title": "Ikus baita ere",
     "tool_link": "→ Kodeketa / deskodeketa tresna",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright ala Copyleft?",
+    "copyright": "Trebetasunak eta errezetak prozesuak dira: metodoak, ezagutza. Bernako Hitzarmenak adimenaren lanak haien adierazpenean babesten ditu, ez ideiak edo prozesuak. Trebetasun batek prozesu bat deskribatzen du: oro har, copyright-aren eremutik kanpo geratzen da. Formulazio bereziki original bat bakarrik izan daiteke babestua. Trebetasun bat partekatzeak ezagutza komuna partekatzea esan nahi du."
   },
   "co": {
     "title": "Hyperskills — Cumpand'ipertestu per agenti IA è umani",
@@ -669,7 +751,9 @@
     "size_note": "A ricetta <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> di tricoteuses pesa 4 895 bytes crudu, 6 528 caratteri in base64. Ci stà in tutti i navigatori muderni. Cù a cumpressione (prefissu <code>gz.</code> o <code>br.</code>), cumpetenze di 250-500 Ko ci stanu in ~32 000 caratteri.",
     "see_also_title": "Vede ancu",
     "tool_link": "→ Strumentu di cudificazione / dicudificazione",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright o Copyleft?",
+    "copyright": "E cumpand'è ricette sò prucessi: metudi, sapè fà. A Cunvenzione di Berna prutege l'opere di u spiritu in a so espressione, micca l'idee o i prucessi. Una cumpetenza descrive un prucessu: in generale, ùn entra micca in u campu di u dirittu d'autore. Solu una furmulazionebbè particularmente uriginale puderia esse prutetta. Sparte una cumpetenza significa sparte una cunniscenza cumuna."
   },
   "eo": {
     "title": "Hyperskills — Hipertekstaj kapabloj por AI kaj homaj agentoj",
@@ -685,7 +769,9 @@
     "size_note": "La recepto <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> de tricoteuses estas 4 895 bajtoj krude, 6 528 signoj en base64. Ĝi konvenas en ĉiuj modernaj retumiloj. Kun densigo (prefikso <code>gz.</code> aŭ <code>br.</code>), kapabloj de 250-500 KB konvenas en ~32 000 signoj.",
     "see_also_title": "Vidu ankaŭ",
     "tool_link": "→ Ilo por kodigi / malkodigi",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright aŭ Copyleft?",
+    "copyright": "Lertoj kaj receptoj estas procezoj: metodoj, scipovojn. La Berna Konvencio protektas verkojn de la menso en ilia esprimo, ne ideojn aŭ procezojn. Lerto priskribas procezon: ĝi ĝenerale estas ekster la kampo de aŭtorrajto. Nur aparte originala formulado povus esti protektata. Kunhavigi lerton signifas kunhavigi komunan scion."
   },
   "jbo": {
     "title": "Hyperskills — xelteksto kakne fi le skami ke djuno prenu joi remna prenu",
@@ -701,6 +787,8 @@
     "size_note": "lo se finti <a href=\"https://tricoteuses.fr/recettes/analyser_amendements\">analyser_amendements</a> fi la tricoteuses cu 4895 sinxa bavla'i ne'i ji 6528 sinxa ne lo base64. ro saske kibro cu kakne lo nu se viska. lo se jdika (cmalu lidne <code>gz.</code> ja <code>br.</code>) cu rinka lo nu 250-500 KB kakne cu jmina ne 32000 sinxa.",
     "see_also_title": "ko viska ji'a",
     "tool_link": "→ tutci lo nu mifra / nalmi'a",
-    "footer": "CC BY-SA 4.0 — Copyright CERI SAS"
+    "footer": "CC BY-SA 4.0 — Copyright CERI SAS",
+    "copyright_title": "Copyright gi'onai Copyleft?",
+    "copyright": "lo kakne e lo filcku cu pruce: lo tadji, lo djuno. la bernDJICU pu'o genja lo menli se finti ne lo se cusku, na lo sidbo ja lo pruce. lo kakne cu se cusku lo pruce: lo nu ta'o na se krali lo fukyzifpo'e. lo traji se ciska steci srana ku po'o se genja. lo nu dunda lo kakne cu lo nu dunda lo kampu djuno."
   }
 }
