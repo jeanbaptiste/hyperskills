@@ -27,6 +27,8 @@ With compression (`gz.` / `br.` prefix): 250–500 KB fit in ~32,000 characters.
 ## See also
 
 - [Skillpedia](https://skillpedia.eu) — CC-licensed skill directory
+- [blog.hyperskills.net](https://blog.hyperskills.net) — blog
+- [webmcp-auto-ui](https://github.com/jeanbaptiste/webmcp-auto-ui) — example app using hyperskills
 - [Agent Skills](https://agentskills.io/)
 - [MCP](https://modelcontextprotocol.io/)
 - [WebMCP](https://webmachinelearning.github.io/webmcp/)
