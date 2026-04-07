@@ -1,0 +1,21 @@
+{
+  "name": "hyperskills",
+  "version": "0.1.0",
+  "description": "Encode and decode hyperskills — skills (recipes) in URLs",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeanbaptiste/hyperskills.git"
+  },
+  "homepage": "https://hyperskills.net",
+  "license": "CC-BY-SA-4.0",
+  "keywords": ["hyperskill", "skill", "recipe", "hyperskills", "agent", "ai", "url"],
+  "engines": {
+    "node": ">=18"
+  },
+  "files": ["src"]
+}
