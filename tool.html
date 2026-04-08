@@ -1,12 +1,18 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Hyperskill Tool — Encode & Decode</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Online tool to encode and decode hyperskills: paste your skill content and get a shareable URL with base64-encoded content.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hyperskills.net/tool.html">
 </head>
 <body>
 
-<h1>Generate a hyperskill</h1>
+<h1>Hyperskill Tool — Encode & Decode</h1>
+
+<h2>Generate a hyperskill</h2>
 
 <p>Source URL:</p>
 
@@ -160,59 +166,179 @@ ORDER BY dsa.auteur DESC, a.nom_complet;
 ```</textarea>
 
 <br><br>
-<button onclick="encode()">→ Encode</button>
+<label><input type="checkbox" id="compress-checkbox"> Compress (gzip)</label>
+<button onclick="encode()">Encode</button>
 
 <p>Hyperskill:</p>
 
 <textarea id="hyperskill-output" rows="6" cols="70" readonly></textarea>
+
+<p id="encode-stats" style="color:#555; font-size:0.9em;"></p>
 
 <br>
 <button onclick="copyOutput()">Copy</button>
 
 <hr>
 
-<h1>Decode a hyperskill</h1>
+<h2>Decode a hyperskill</h2>
 
 <p>Paste a hyperskill:</p>
 
 <textarea id="hyperskill-input" rows="4" cols="70"></textarea>
 
 <br><br>
-<button onclick="decode()">→ Decode</button>
+<button onclick="decode()">Decode</button>
 
 <p>Source URL:</p>
 
 <input type="text" id="decoded-uri" size="60" readonly>
 
-<p>Content:</p>
+<p>Content: <span id="decode-mode" style="font-size:0.85em; color:#555;"></span></p>
 
 <textarea id="skill-output" rows="20" cols="70" readonly></textarea>
 
 <hr>
-<p>CC BY-SA 4.0 — Copyright CERI SAS — <a href="https://hyperskills.net">hyperskills.net</a> — <a href="./index.html">← Home</a></p>
+<p>CC BY-SA 4.0 — Copyright CERI SAS — <a href="https://hyperskills.net">hyperskills.net</a> — <a href="./index.html">&larr; Home</a></p>
 
 <script>
-function encode() {
-  var uri = document.getElementById('source-uri').value;
-  var skill = document.getElementById('skill-input').value;
-  var b64 = btoa(unescape(encodeURIComponent(skill)));
-  var sep = uri.indexOf('?') === -1 ? '?' : '&';
-  document.getElementById('hyperskill-output').value = uri + sep + 'hs=' + b64;
+// --- Compression helpers using native CompressionStream / DecompressionStream ---
+
+async function gzipCompress(text) {
+  var encoder = new TextEncoder();
+  var input = encoder.encode(text);
+  var cs = new CompressionStream('gzip');
+  var writer = cs.writable.getWriter();
+  writer.write(input);
+  writer.close();
+  var reader = cs.readable.getReader();
+  var chunks = [];
+  while (true) {
+    var result = await reader.read();
+    if (result.done) break;
+    chunks.push(result.value);
+  }
+  var totalLen = 0;
+  for (var i = 0; i < chunks.length; i++) totalLen += chunks[i].length;
+  var merged = new Uint8Array(totalLen);
+  var offset = 0;
+  for (var i = 0; i < chunks.length; i++) {
+    merged.set(chunks[i], offset);
+    offset += chunks[i].length;
+  }
+  return merged;
 }
 
-function decode() {
+async function gzipDecompress(uint8arr) {
+  var ds = new DecompressionStream('gzip');
+  var writer = ds.writable.getWriter();
+  writer.write(uint8arr);
+  writer.close();
+  var reader = ds.readable.getReader();
+  var chunks = [];
+  while (true) {
+    var result = await reader.read();
+    if (result.done) break;
+    chunks.push(result.value);
+  }
+  var totalLen = 0;
+  for (var i = 0; i < chunks.length; i++) totalLen += chunks[i].length;
+  var merged = new Uint8Array(totalLen);
+  var offset = 0;
+  for (var i = 0; i < chunks.length; i++) {
+    merged.set(chunks[i], offset);
+    offset += chunks[i].length;
+  }
+  var decoder = new TextDecoder();
+  return decoder.decode(merged);
+}
+
+function uint8ToBase64(uint8arr) {
+  var binary = '';
+  for (var i = 0; i < uint8arr.length; i++) {
+    binary += String.fromCharCode(uint8arr[i]);
+  }
+  return btoa(binary);
+}
+
+function base64ToUint8(b64) {
+  var binary = atob(b64);
+  var arr = new Uint8Array(binary.length);
+  for (var i = 0; i < binary.length; i++) {
+    arr[i] = binary.charCodeAt(i);
+  }
+  return arr;
+}
+
+// --- Encode ---
+
+async function encode() {
+  var uri = document.getElementById('source-uri').value;
+  var skill = document.getElementById('skill-input').value;
+  var compress = document.getElementById('compress-checkbox').checked;
+  var sep = uri.indexOf('?') === -1 ? '?' : '&';
+  var statsEl = document.getElementById('encode-stats');
+
+  var rawBytes = new TextEncoder().encode(skill);
+  var rawSize = rawBytes.length;
+
+  if (compress) {
+    try {
+      var compressed = await gzipCompress(skill);
+      var b64 = uint8ToBase64(compressed);
+      var payload = 'gz.' + b64;
+      document.getElementById('hyperskill-output').value = uri + sep + 'hs=' + payload;
+      statsEl.textContent = 'Raw: ' + rawSize + ' bytes | Compressed: ' + compressed.length + ' bytes | Ratio: ' + Math.round((1 - compressed.length / rawSize) * 100) + '% smaller';
+    } catch (e) {
+      alert('Compression error: ' + e.message);
+      return;
+    }
+  } else {
+    var b64 = btoa(unescape(encodeURIComponent(skill)));
+    document.getElementById('hyperskill-output').value = uri + sep + 'hs=' + b64;
+    var b64Size = b64.length;
+    statsEl.textContent = 'Raw: ' + rawSize + ' bytes | Base64: ' + b64Size + ' bytes';
+  }
+}
+
+// --- Decode ---
+
+async function decode() {
   var input = document.getElementById('hyperskill-input').value;
   var match = input.match(/[?&]hs=([^&]+)/);
   if (!match) {
     alert('No ?hs= found');
     return;
   }
-  var b64 = match[1];
+  var payload = match[1];
   var uri = input.replace(/[?&]hs=[^&]+/, '');
-  var skill = decodeURIComponent(escape(atob(b64)));
-  document.getElementById('decoded-uri').value = uri;
-  document.getElementById('skill-output').value = skill;
+  var modeEl = document.getElementById('decode-mode');
+
+  if (payload.startsWith('gz.')) {
+    try {
+      var b64 = payload.substring(3);
+      var compressed = base64ToUint8(b64);
+      var skill = await gzipDecompress(compressed);
+      document.getElementById('decoded-uri').value = uri;
+      document.getElementById('skill-output').value = skill;
+      modeEl.textContent = '(compressed)';
+    } catch (e) {
+      alert('Decompression error: ' + e.message);
+      return;
+    }
+  } else {
+    try {
+      var skill = decodeURIComponent(escape(atob(payload)));
+      document.getElementById('decoded-uri').value = uri;
+      document.getElementById('skill-output').value = skill;
+      modeEl.textContent = '(raw)';
+    } catch (e) {
+      alert('Decode error: ' + e.message);
+      return;
+    }
+  }
 }
+
+// --- Copy ---
 
 function copyOutput() {
   var el = document.getElementById('hyperskill-output');
@@ -220,16 +346,42 @@ function copyOutput() {
   document.execCommand('copy');
 }
 
-(function() {
+// --- Auto-decode on page load ---
+
+(async function() {
   var params = new URLSearchParams(window.location.search);
   var hs = params.get('hs');
-  if (hs) {
+  if (!hs) return;
+
+  var modeEl = document.getElementById('decode-mode');
+
+  if (hs.startsWith('gz.')) {
+    try {
+      var b64 = hs.substring(3);
+      var compressed = base64ToUint8(b64);
+      var skill = await gzipDecompress(compressed);
+      document.getElementById('hyperskill-input').value = window.location.href;
+      document.getElementById('decoded-uri').value = window.location.origin + window.location.pathname;
+      document.getElementById('skill-output').value = skill;
+      modeEl.textContent = '(compressed)';
+    } catch (e) {
+      // Fallback: try raw base64 decode
+      try {
+        var skill = decodeURIComponent(escape(atob(hs)));
+        document.getElementById('hyperskill-input').value = window.location.href;
+        document.getElementById('decoded-uri').value = window.location.origin + window.location.pathname;
+        document.getElementById('skill-output').value = skill;
+        modeEl.textContent = '(raw)';
+      } catch (e2) {}
+    }
+  } else {
     try {
       var skill = decodeURIComponent(escape(atob(hs)));
       document.getElementById('hyperskill-input').value = window.location.href;
       document.getElementById('decoded-uri').value = window.location.origin + window.location.pathname;
       document.getElementById('skill-output').value = skill;
-    } catch(e) {}
+      modeEl.textContent = '(raw)';
+    } catch (e) {}
   }
 })();
 </script>
