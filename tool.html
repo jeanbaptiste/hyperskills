@@ -167,7 +167,7 @@ ORDER BY dsa.auteur DESC, a.nom_complet;
 
 <br><br>
 <label><input type="checkbox" id="compress-checkbox" checked> Compress (gzip)</label>
-<button onclick="encode()">Encode</button>
+<button onclick="doEncode()">Encode</button>
 
 <p>Hyperskill:</p>
 
@@ -176,7 +176,7 @@ ORDER BY dsa.auteur DESC, a.nom_complet;
 <p id="encode-stats" style="color:#555; font-size:0.9em;"></p>
 
 <br>
-<button onclick="copyOutput()">Copy</button>
+<button onclick="doCopy()">Copy</button>
 
 <hr>
 
@@ -187,7 +187,7 @@ ORDER BY dsa.auteur DESC, a.nom_complet;
 <textarea id="hyperskill-input" rows="4" cols="70"></textarea>
 
 <br><br>
-<button onclick="decode()">Decode</button>
+<button onclick="doDecode()">Decode</button>
 
 <p>Source URL:</p>
 
@@ -200,195 +200,78 @@ ORDER BY dsa.auteur DESC, a.nom_complet;
 <hr>
 <p>CC BY-SA 4.0 — Copyright CERI SAS — <a href="https://hyperskills.net">hyperskills.net</a> — <a href="./index.html">&larr; Home</a></p>
 
-<script>
-// --- Compression helpers using native CompressionStream / DecompressionStream ---
-
-async function gzipCompress(text) {
-  var encoder = new TextEncoder();
-  var input = encoder.encode(text);
-  var cs = new CompressionStream('gzip');
-  var writer = cs.writable.getWriter();
-  writer.write(input);
-  writer.close();
-  var reader = cs.readable.getReader();
-  var chunks = [];
-  while (true) {
-    var result = await reader.read();
-    if (result.done) break;
-    chunks.push(result.value);
-  }
-  var totalLen = 0;
-  for (var i = 0; i < chunks.length; i++) totalLen += chunks[i].length;
-  var merged = new Uint8Array(totalLen);
-  var offset = 0;
-  for (var i = 0; i < chunks.length; i++) {
-    merged.set(chunks[i], offset);
-    offset += chunks[i].length;
-  }
-  return merged;
-}
-
-async function gzipDecompress(uint8arr) {
-  var ds = new DecompressionStream('gzip');
-  var writer = ds.writable.getWriter();
-  writer.write(uint8arr);
-  writer.close();
-  var reader = ds.readable.getReader();
-  var chunks = [];
-  while (true) {
-    var result = await reader.read();
-    if (result.done) break;
-    chunks.push(result.value);
-  }
-  var totalLen = 0;
-  for (var i = 0; i < chunks.length; i++) totalLen += chunks[i].length;
-  var merged = new Uint8Array(totalLen);
-  var offset = 0;
-  for (var i = 0; i < chunks.length; i++) {
-    merged.set(chunks[i], offset);
-    offset += chunks[i].length;
-  }
-  var decoder = new TextDecoder();
-  return decoder.decode(merged);
-}
-
-function uint8ToBase64url(uint8arr) {
-  var binary = '';
-  for (var i = 0; i < uint8arr.length; i++) {
-    binary += String.fromCharCode(uint8arr[i]);
-  }
-  return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-}
-
-function base64urlToUint8(b64) {
-  var s = b64.replace(/-/g, '+').replace(/_/g, '/');
-  while (s.length % 4) s += '=';
-  var binary = atob(s);
-  var arr = new Uint8Array(binary.length);
-  for (var i = 0; i < binary.length; i++) {
-    arr[i] = binary.charCodeAt(i);
-  }
-  return arr;
-}
+<script type="module">
+import { encode, decode } from 'https://esm.sh/hyperskills@0.1.2';
 
 // --- Encode ---
 
-async function encode() {
+window.doEncode = async function() {
   var uri = document.getElementById('source-uri').value;
   var skill = document.getElementById('skill-input').value;
   var compress = document.getElementById('compress-checkbox').checked;
-  var sep = uri.indexOf('?') === -1 ? '?' : '&';
   var statsEl = document.getElementById('encode-stats');
 
-  var rawBytes = new TextEncoder().encode(skill);
-  var rawSize = rawBytes.length;
+  var rawSize = new TextEncoder().encode(skill).length;
 
-  if (compress) {
-    try {
-      var compressed = await gzipCompress(skill);
-      var b64 = uint8ToBase64url(compressed);
-      var payload = 'gz.' + b64;
-      document.getElementById('hyperskill-output').value = uri + sep + 'hs=' + payload;
-      statsEl.textContent = 'Raw: ' + rawSize + ' bytes | Compressed: ' + compressed.length + ' bytes | Ratio: ' + Math.round((1 - compressed.length / rawSize) * 100) + '% smaller';
-    } catch (e) {
-      alert('Compression error: ' + e.message);
-      return;
+  try {
+    var url = await encode(uri, skill, { compress: compress ? 'gz' : 'none' });
+    document.getElementById('hyperskill-output').value = url;
+
+    var hsParam = new URL(url).searchParams.get('hs');
+    var paramSize = hsParam.length;
+    if (compress) {
+      var compressedSize = Math.ceil((paramSize - 3) * 3 / 4); // subtract "gz." prefix
+      statsEl.textContent = 'Raw: ' + rawSize + ' bytes | Compressed: ~' + compressedSize + ' bytes | Ratio: ' + Math.round((1 - compressedSize / rawSize) * 100) + '% smaller';
+    } else {
+      statsEl.textContent = 'Raw: ' + rawSize + ' bytes | Base64url: ' + paramSize + ' chars';
     }
-  } else {
-    var encoder = new TextEncoder();
-    var raw = encoder.encode(skill);
-    var b64 = uint8ToBase64url(raw);
-    document.getElementById('hyperskill-output').value = uri + sep + 'hs=' + b64;
-    var b64Size = b64.length;
-    statsEl.textContent = 'Raw: ' + rawSize + ' bytes | Base64url: ' + b64Size + ' bytes';
+  } catch (e) {
+    alert('Encode error: ' + e.message);
   }
-}
+};
 
 // --- Decode ---
 
-async function decode() {
+window.doDecode = async function() {
   var input = document.getElementById('hyperskill-input').value;
-  var match = input.match(/[?&]hs=([^&]+)/);
-  if (!match) {
+  if (!input.match(/[?&]hs=/)) {
     alert('No ?hs= found');
     return;
   }
-  var payload = match[1];
-  var uri = input.replace(/[?&]hs=[^&]+/, '');
-  var modeEl = document.getElementById('decode-mode');
 
-  if (payload.startsWith('gz.')) {
-    try {
-      var b64 = payload.substring(3);
-      var compressed = base64urlToUint8(b64);
-      var skill = await gzipDecompress(compressed);
-      document.getElementById('decoded-uri').value = uri;
-      document.getElementById('skill-output').value = skill;
-      modeEl.textContent = '(compressed)';
-    } catch (e) {
-      alert('Decompression error: ' + e.message);
-      return;
-    }
-  } else {
-    try {
-      var bytes = base64urlToUint8(payload);
-      var skill = new TextDecoder().decode(bytes);
-      document.getElementById('decoded-uri').value = uri;
-      document.getElementById('skill-output').value = skill;
-      modeEl.textContent = '(raw)';
-    } catch (e) {
-      alert('Decode error: ' + e.message);
-      return;
-    }
+  try {
+    var result = await decode(input);
+    document.getElementById('decoded-uri').value = result.url;
+    document.getElementById('skill-output').value = result.content;
+    var hsParam = new URL(input).searchParams.get('hs');
+    document.getElementById('decode-mode').textContent = hsParam.startsWith('gz.') ? '(compressed)' : '(raw)';
+  } catch (e) {
+    alert('Decode error: ' + e.message);
   }
-}
+};
 
 // --- Copy ---
 
-function copyOutput() {
+window.doCopy = function() {
   var el = document.getElementById('hyperskill-output');
   el.select();
   document.execCommand('copy');
-}
+};
 
 // --- Auto-decode on page load ---
 
 (async function() {
-  var params = new URLSearchParams(window.location.search);
-  var hs = params.get('hs');
+  var hs = new URLSearchParams(window.location.search).get('hs');
   if (!hs) return;
 
-  var modeEl = document.getElementById('decode-mode');
-
-  if (hs.startsWith('gz.')) {
-    try {
-      var b64 = hs.substring(3);
-      var compressed = base64urlToUint8(b64);
-      var skill = await gzipDecompress(compressed);
-      document.getElementById('hyperskill-input').value = window.location.href;
-      document.getElementById('decoded-uri').value = window.location.origin + window.location.pathname;
-      document.getElementById('skill-output').value = skill;
-      modeEl.textContent = '(compressed)';
-    } catch (e) {
-      // Fallback: try raw base64url decode
-      try {
-        var bytes = base64urlToUint8(hs);
-        var skill = new TextDecoder().decode(bytes);
-        document.getElementById('hyperskill-input').value = window.location.href;
-        document.getElementById('decoded-uri').value = window.location.origin + window.location.pathname;
-        document.getElementById('skill-output').value = skill;
-        modeEl.textContent = '(raw)';
-      } catch (e2) {}
-    }
-  } else {
-    try {
-      var bytes = base64urlToUint8(hs);
-      var skill = new TextDecoder().decode(bytes);
-      document.getElementById('hyperskill-input').value = window.location.href;
-      document.getElementById('decoded-uri').value = window.location.origin + window.location.pathname;
-      document.getElementById('skill-output').value = skill;
-      modeEl.textContent = '(raw)';
-    } catch (e) {}
+  try {
+    var result = await decode(window.location.href);
+    document.getElementById('hyperskill-input').value = window.location.href;
+    document.getElementById('decoded-uri').value = result.url;
+    document.getElementById('skill-output').value = result.content;
+    document.getElementById('decode-mode').textContent = hs.startsWith('gz.') ? '(compressed)' : '(raw)';
+  } catch (e) {
+    // silent fail on auto-decode
   }
 })();
 </script>
