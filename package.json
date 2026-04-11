@@ -1,6 +1,6 @@
 {
   "name": "hyperskills",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Encode and decode hyperskills — skills (recipes) in URLs",
   "type": "module",
   "exports": {
