@@ -2,29 +2,31 @@
  * hyperskills — Encode and decode hyperskills (skills/recipes in URLs)
  * Spec: https://hyperskills.net
  *
- * Format: source_url?hs=BASE64_CONTENT
- * Compression: prefix "gz." (gzip) or "br." (brotli, Node.js only)
+ * Format: source_url?hs=BASE64URL_CONTENT (or gz.BASE64URL / br.BASE64URL)
+ * Compression: gzip by default (prefix "gz."), brotli optional ("br.", Node.js only)
  * Traceability: SHA-256(sourceUrl + content [+ previousHash])
  * Signature: Ed25519 via crypto.subtle
  */
 
 // --- Helpers ---
 
-function toBase64(str) {
-  const bytes = new TextEncoder().encode(str);
+function toBase64url(bytes) {
   let binary = '';
   for (const b of bytes) binary += String.fromCharCode(b);
-  return btoa(binary);
+  return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }
 
-function fromBase64(b64) {
-  // Normalize base64url → base64 standard
+function fromBase64urlToBytes(b64) {
   let s = b64.replace(/-/g, '+').replace(/_/g, '/');
   while (s.length % 4) s += '=';
   const binary = atob(s);
   const bytes = new Uint8Array(binary.length);
   for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
-  return new TextDecoder().decode(bytes);
+  return bytes;
+}
+
+function fromBase64(b64) {
+  return new TextDecoder().decode(fromBase64urlToBytes(b64));
 }
 
 async function compressGzip(bytes) {
@@ -65,23 +67,23 @@ async function decompressBrotli(bytes) {
  *
  * @param {string} sourceUrl - The URL where the skill applies
  * @param {string} content - Free-form content: Markdown, SQL, YAML, HTML, text
- * @param {{ compress?: 'gz' | 'br' }} [options]
- *   - compress: 'gz' (gzip, browser + Node) | 'br' (brotli, Node.js only)
+ * @param {{ compress?: 'gz' | 'br' | 'none' }} [options]
+ *   - compress: 'gz' (gzip, default, browser + Node) | 'br' (brotli, Node.js only) | 'none' (no compression)
  * @returns {Promise<string>} Hyperskill URL
  */
 export async function encode(sourceUrl, content, options = {}) {
-  const { compress } = options;
+  const compress = options.compress ?? 'gz';
   const bytes = new TextEncoder().encode(content);
   let param;
 
   if (compress === 'gz') {
     const compressed = await compressGzip(bytes);
-    param = 'gz.' + btoa(String.fromCharCode(...compressed));
+    param = 'gz.' + toBase64url(compressed);
   } else if (compress === 'br') {
     const compressed = await compressBrotli(bytes);
-    param = 'br.' + btoa(String.fromCharCode(...compressed));
-  } else {
-    param = toBase64(content);
+    param = 'br.' + toBase64url(compressed);
+  } else if (compress === 'none') {
+    param = toBase64url(bytes);
   }
 
   const url = new URL(sourceUrl);
@@ -92,7 +94,7 @@ export async function encode(sourceUrl, content, options = {}) {
 /**
  * Decode a hyperskill URL or raw ?hs= param value.
  *
- * @param {string} urlOrParam - Full URL or raw base64 param
+ * @param {string} urlOrParam - Full URL or raw base64url param
  * @returns {Promise<{ url: string, content: string }>}
  */
 export async function decode(urlOrParam) {
@@ -111,10 +113,10 @@ export async function decode(urlOrParam) {
   let content;
 
   if (param.startsWith('gz.')) {
-    const bytes = Uint8Array.from(atob(param.slice(3)), c => c.charCodeAt(0));
+    const bytes = fromBase64urlToBytes(param.slice(3));
     content = await decompressGzip(bytes);
   } else if (param.startsWith('br.')) {
-    const bytes = Uint8Array.from(atob(param.slice(3)), c => c.charCodeAt(0));
+    const bytes = fromBase64urlToBytes(param.slice(3));
     content = await decompressBrotli(bytes);
   } else {
     content = fromBase64(param);
@@ -156,25 +158,25 @@ export async function createVersion(sourceUrl, content, previousHash) {
  *
  * @param {string} hashHex - 64-char hex string from hash()
  * @param {CryptoKey} privateKey - Ed25519 CryptoKey
- * @returns {Promise<string>} base64 signature
+ * @returns {Promise<string>} base64url signature
  */
 export async function sign(hashHex, privateKey) {
   const bytes = new TextEncoder().encode(hashHex);
   const sig = await crypto.subtle.sign('Ed25519', privateKey, bytes);
-  return btoa(String.fromCharCode(...new Uint8Array(sig)));
+  return toBase64url(new Uint8Array(sig));
 }
 
 /**
  * Verify an Ed25519 signature.
  *
  * @param {string} hashHex - 64-char hex string from hash()
- * @param {string} signatureB64 - base64 signature from sign()
+ * @param {string} signatureB64 - base64url signature from sign()
  * @param {CryptoKey} publicKey - Ed25519 CryptoKey
  * @returns {Promise<boolean>}
  */
 export async function verify(hashHex, signatureB64, publicKey) {
   const bytes = new TextEncoder().encode(hashHex);
-  const sig = Uint8Array.from(atob(signatureB64), c => c.charCodeAt(0));
+  const sig = fromBase64urlToBytes(signatureB64);
   return crypto.subtle.verify('Ed25519', publicKey, sig, bytes);
 }
 

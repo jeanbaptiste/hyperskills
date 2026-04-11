@@ -4,7 +4,7 @@
 <title>Hyperskill Tool — Encode & Decode</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Online tool to encode and decode hyperskills: paste your skill content and get a shareable URL with base64-encoded content.">
+<meta name="description" content="Online tool to encode and decode hyperskills: paste your skill content and get a shareable URL with base64url-encoded content.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hyperskills.net/tool.html">
 </head>
@@ -252,16 +252,18 @@ async function gzipDecompress(uint8arr) {
   return decoder.decode(merged);
 }
 
-function uint8ToBase64(uint8arr) {
+function uint8ToBase64url(uint8arr) {
   var binary = '';
   for (var i = 0; i < uint8arr.length; i++) {
     binary += String.fromCharCode(uint8arr[i]);
   }
-  return btoa(binary);
+  return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }
 
-function base64ToUint8(b64) {
-  var binary = atob(b64);
+function base64urlToUint8(b64) {
+  var s = b64.replace(/-/g, '+').replace(/_/g, '/');
+  while (s.length % 4) s += '=';
+  var binary = atob(s);
   var arr = new Uint8Array(binary.length);
   for (var i = 0; i < binary.length; i++) {
     arr[i] = binary.charCodeAt(i);
@@ -284,7 +286,7 @@ async function encode() {
   if (compress) {
     try {
       var compressed = await gzipCompress(skill);
-      var b64 = uint8ToBase64(compressed);
+      var b64 = uint8ToBase64url(compressed);
       var payload = 'gz.' + b64;
       document.getElementById('hyperskill-output').value = uri + sep + 'hs=' + payload;
       statsEl.textContent = 'Raw: ' + rawSize + ' bytes | Compressed: ' + compressed.length + ' bytes | Ratio: ' + Math.round((1 - compressed.length / rawSize) * 100) + '% smaller';
@@ -293,10 +295,12 @@ async function encode() {
       return;
     }
   } else {
-    var b64 = btoa(unescape(encodeURIComponent(skill)));
+    var encoder = new TextEncoder();
+    var raw = encoder.encode(skill);
+    var b64 = uint8ToBase64url(raw);
     document.getElementById('hyperskill-output').value = uri + sep + 'hs=' + b64;
     var b64Size = b64.length;
-    statsEl.textContent = 'Raw: ' + rawSize + ' bytes | Base64: ' + b64Size + ' bytes';
+    statsEl.textContent = 'Raw: ' + rawSize + ' bytes | Base64url: ' + b64Size + ' bytes';
   }
 }
 
@@ -316,7 +320,7 @@ async function decode() {
   if (payload.startsWith('gz.')) {
     try {
       var b64 = payload.substring(3);
-      var compressed = base64ToUint8(b64);
+      var compressed = base64urlToUint8(b64);
       var skill = await gzipDecompress(compressed);
       document.getElementById('decoded-uri').value = uri;
       document.getElementById('skill-output').value = skill;
@@ -327,7 +331,8 @@ async function decode() {
     }
   } else {
     try {
-      var skill = decodeURIComponent(escape(atob(payload)));
+      var bytes = base64urlToUint8(payload);
+      var skill = new TextDecoder().decode(bytes);
       document.getElementById('decoded-uri').value = uri;
       document.getElementById('skill-output').value = skill;
       modeEl.textContent = '(raw)';
@@ -358,16 +363,17 @@ function copyOutput() {
   if (hs.startsWith('gz.')) {
     try {
       var b64 = hs.substring(3);
-      var compressed = base64ToUint8(b64);
+      var compressed = base64urlToUint8(b64);
       var skill = await gzipDecompress(compressed);
       document.getElementById('hyperskill-input').value = window.location.href;
       document.getElementById('decoded-uri').value = window.location.origin + window.location.pathname;
       document.getElementById('skill-output').value = skill;
       modeEl.textContent = '(compressed)';
     } catch (e) {
-      // Fallback: try raw base64 decode
+      // Fallback: try raw base64url decode
       try {
-        var skill = decodeURIComponent(escape(atob(hs)));
+        var bytes = base64urlToUint8(hs);
+        var skill = new TextDecoder().decode(bytes);
         document.getElementById('hyperskill-input').value = window.location.href;
         document.getElementById('decoded-uri').value = window.location.origin + window.location.pathname;
         document.getElementById('skill-output').value = skill;
@@ -376,7 +382,8 @@ function copyOutput() {
     }
   } else {
     try {
-      var skill = decodeURIComponent(escape(atob(hs)));
+      var bytes = base64urlToUint8(hs);
+      var skill = new TextDecoder().decode(bytes);
       document.getElementById('hyperskill-input').value = window.location.href;
       document.getElementById('decoded-uri').value = window.location.origin + window.location.pathname;
       document.getElementById('skill-output').value = skill;

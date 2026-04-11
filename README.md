@@ -1,15 +1,25 @@
 # Hyperskills
 
-A hyperskill (hypertext skill) is a URL containing a skill base64-encoded in the `hs` query parameter.
+A hyperskill (hypertext skill) is a URL containing a skill base64url-encoded in the `hs` query parameter. Gzip compression is enabled by default.
 
 ## Website
 
 [hyperskills.net](https://hyperskills.net)
 
+## NPM
+
+```bash
+npm install hyperskills
+```
+
+[npmjs.com/package/hyperskills](https://www.npmjs.com/package/hyperskills)
+
 ## Format
 
 ```
-source_url?hs=BASE64_CONTENT
+source_url?hs=gz.BASE64URL_CONTENT   (gzip, default)
+source_url?hs=br.BASE64URL_CONTENT   (brotli, Node.js only)
+source_url?hs=BASE64URL_CONTENT      (no compression)
 ```
 
 Content is free-form: Markdown, SQL, YAML, HTML, plain text. License is up to the author.
