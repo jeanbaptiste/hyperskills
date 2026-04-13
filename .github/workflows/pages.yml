@@ -12,6 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Ensure GoatCounter tracking
+        run: |
+          SNIPPET='<script>window.goatcounter = { path: function(p) { return location.host + p } }</script>\n<script data-goatcounter="https://goat.cybernego.com/count"\n        async src="//goat.cybernego.com/count.js"></script>'
+          for f in $(find . -name "*.html" -not -path "./.github/*"); do
+            if ! grep -q "goatcounter" "$f"; then
+              sed -i "s|</body>|${SNIPPET}\n</body>|" "$f"
+              echo "✅ Injected GoatCounter in $f"
+            fi
+          done
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
